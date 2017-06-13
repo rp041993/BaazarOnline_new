@@ -1,0 +1,308 @@
+package org.apache.jsp.seller;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import org.bson.types.ObjectId;
+import com.mongodb.DB;
+
+public final class Upload_005fproduct_005fimage_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants.add("/seller/Footer.jsp");
+  }
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write(" <link rel=\"icon\" type=\"image/ico\" href=\"favicon.ico\">\n");
+      out.write("        \n");
+      out.write("    <!-- common stylesheets-->\n");
+      out.write("        <!-- bootstrap framework css -->\n");
+      out.write("            <link rel=\"stylesheet\" href=\"../bootstrap/css/bootstrap.min.css\">\n");
+      out.write("            <link rel=\"stylesheet\" href=\"../bootstrap/css/bootstrap-responsive.min.css\">\n");
+      out.write("            \n");
+      out.write("<!--            <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.5.0/jquery.serialize-object.min.js\">\n");
+      out.write("         splashy icon pack -->\n");
+      out.write("            <link rel=\"stylesheet\" href=\"../img/splashy/splashy.css\">\n");
+      out.write("        <!-- power tooltips -->\n");
+      out.write("            <link rel=\"stylesheet\" href=\"../js/lib/powertip/jquery.powertip.css\">\n");
+      out.write("        <!-- google web fonts -->\n");
+      out.write("            <link rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Abel\">\n");
+      out.write("            <link rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300\">\n");
+      out.write("                <link href=\"../js/lib/bootstrap-datepicker/css/datepicker.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
+      out.write("    <!-- aditional stylesheets -->\n");
+      out.write("        \n");
+      out.write("\n");
+      out.write("        <!-- main stylesheet -->\n");
+      out.write("            <link rel=\"stylesheet\" href=\"../css/beoro.css\">\n");
+      out.write("      \n");
+      out.write("            <!-- Common JS -->\n");
+      out.write("        <!-- jQuery framework -->\n");
+      out.write("            <script src=\"../js/jquery.min.js\"></script>\n");
+      out.write("            <script src=\"../js/jquery-migrate.js\"></script>\n");
+      out.write("            <script src=\"../js/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js\" type=\"text/javascript\"></script>\n");
+      out.write("        <!-- bootstrap Framework plugins -->\n");
+      out.write("            <script src=\"../bootstrap/js/bootstrap.min.js\"></script>\n");
+      out.write("        <!-- top menu -->\n");
+      out.write("            <script src=\"../js/jquery.fademenu.js\"></script>\n");
+      out.write("        <!-- top mobile menu -->\n");
+      out.write("            <script src=\"../js/selectnav.min.js\"></script>\n");
+      out.write("        <!-- actual width/height of hidden DOM elements -->\n");
+      out.write("            <script src=\"../js/jquery.actual.min.js\"></script>\n");
+      out.write("        <!-- jquery easing animations -->\n");
+      out.write("            <script src=\"../js/jquery.easing.1.3.min.js\"></script>\n");
+      out.write("        <!-- power tooltips -->\n");
+      out.write("            <script src=\"../js/lib/powertip/jquery.powertip-1.1.0.min.js\"></script>\n");
+      out.write("        <!-- date library -->\n");
+      out.write("        <script src=\"../js/form/bootstrap-fileupload.min.js\" type=\"text/javascript\"></script>\n");
+      out.write("            <script src=\"../js/moment.min.js\"></script>\n");
+      out.write("        <!-- common functions -->\n");
+      out.write("            <script src=\"../js/beoro_common.js\"></script>\n");
+      out.write("           <link href=\"../js/lib/smart-wizard/styles/smart_wizard.css\" rel=\"stylesheet\" type=\"text/css\"/><html>\n");
+      out.write("       <body >\n");
+      out.write("           <!-- breadcrumbs -->\n");
+      out.write("            \n");
+      out.write("\n");
+      out.write("           <!-- main content -->\n");
+      out.write("            <div class=\"container\">\n");
+      out.write("                <div class=\"row-fluid\">\n");
+      out.write("                    <div class=\"span12\">\n");
+      out.write("                        <div class=\"w-box w-box-blue\">\n");
+      out.write("                             <form action='Upload_Seller_product_image' method=\"POST\" enctype=\"multipart/form-data\">\n");
+      out.write("                            <div class=\"w-box-header\">\n");
+      out.write("                                <h4>Upload Product Images</h4>\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"w-box-content cnt_a user_profile\">\n");
+      out.write("                                <div class=\"row-fluid\">\n");
+      out.write("                                    <div class=\"span8\">\n");
+      out.write("                                        <div class=\"formSep\">\n");
+      out.write("                                        <div class=\"fileupload fileupload-new\" data-provides=\"fileupload\">\n");
+      out.write("                                            <div class=\"fileupload-new thumbnail\" style=\"width: 60px; height: 60px;\">\n");
+      out.write("                                                <img src=\"../img/No_image.gif\" alt=\"\" id=\"image\">\n");
+      out.write("                                            </div>\n");
+      out.write("                                            <div class=\"fileupload-preview fileupload-exists thumbnail\" style=\"width: 60px; height: 60px;\"></div>\n");
+      out.write("                                            <span class=\"btn btn-small btn-file\">\n");
+      out.write("                                                <span class=\"fileupload-new\">Select image</span>\n");
+      out.write("                                                <span class=\"fileupload-exists\">Change</span>\n");
+      out.write("                                                <input type=\"file\" id='PAN_file' name='PAN_file' accept=\"image/*\" required onchange=\"validateImage(this.id);\"></span>\n");
+      out.write("                                            <a href=\"#\" class=\"btn btn-small btn-link fileupload-exists\" data-dismiss=\"fileupload\">Remove</a>\n");
+      out.write("                                        </div>\n");
+      out.write("                                        </div>\n");
+      out.write("                                        <!--////////////////////////////////////////////////-->\n");
+      out.write("                                        <div class=\"formSep\">\n");
+      out.write("                                        <div class=\"fileupload fileupload-new\" data-provides=\"fileupload\">\n");
+      out.write("                                            <div class=\"fileupload-new thumbnail\" style=\"width: 60px; height: 60px;\">\n");
+      out.write("                                                <img src=\"../img/No_image.gif\" alt=\"\" id=\"image\">\n");
+      out.write("                                            </div>\n");
+      out.write("                                            <div class=\"fileupload-preview fileupload-exists thumbnail\" style=\"width: 60px; height: 60px;\"></div>\n");
+      out.write("                                            <span class=\"btn btn-small btn-file\">\n");
+      out.write("                                                <span class=\"fileupload-new\">Select image</span>\n");
+      out.write("                                                <span class=\"fileupload-exists\">Change</span>\n");
+      out.write("                                                <input type=\"file\" id='TIN_file' name='TIN_file'accept=\"image/*\" onchange=\"validateImage(this.id);\"></span>\n");
+      out.write("                                            <a href=\"#\" class=\"btn btn-small btn-link fileupload-exists\" data-dismiss=\"fileupload\">Remove</a>\n");
+      out.write("                                        </div>\n");
+      out.write("                                        </div>\n");
+      out.write("                                        <!--/////////////////////////////////////////////////////////////////-->\n");
+      out.write("                                        <div class=\"formSep\">\n");
+      out.write("                                        <div class=\"fileupload fileupload-new\" data-provides=\"fileupload\">\n");
+      out.write("                                            <div class=\"fileupload-new thumbnail\" style=\"width: 60px; height: 60px;\">\n");
+      out.write("                                               <img src=\"../img/No_image.gif\" alt=\"\" id=\"image\">\n");
+      out.write("                                            </div>\n");
+      out.write("                                            <div class=\"fileupload-preview fileupload-exists thumbnail\" style=\"width: 60px; height: 60px;\"></div>\n");
+      out.write("                                            <span class=\"btn btn-small btn-file\">\n");
+      out.write("                                                <span class=\"fileupload-new\">Select image</span>\n");
+      out.write("                                                <span class=\"fileupload-exists\">Change</span>\n");
+      out.write("                                                <input type=\"file\" id='CST_file' name='CST_file' accept=\"image/*\" onchange=\"validateImage(this.id);\" ></span>\n");
+      out.write("                                            <a href=\"#\" class=\"btn btn-small btn-link fileupload-exists\" data-dismiss=\"fileupload\">Remove</a>\n");
+      out.write("                                        </div>\n");
+      out.write("                                    </div>\n");
+      out.write("                                    <!--/////////////////////////////////////////////////////////////-->    \n");
+      out.write("                                    <div class=\"formSep\">\n");
+      out.write("                                        <div class=\"fileupload fileupload-new\" data-provides=\"fileupload\">\n");
+      out.write("                                            <div class=\"fileupload-new thumbnail\" style=\"width: 60px; height: 60px;\">\n");
+      out.write("                                                <img src=\"../img/No_image.gif\" alt=\"\" id=\"image\">\n");
+      out.write("                                            </div>\n");
+      out.write("                                            <div class=\"fileupload-preview fileupload-exists thumbnail\" style=\"width: 60px; height: 60px;\"></div>\n");
+      out.write("                                            <span class=\"btn btn-small btn-file\">\n");
+      out.write("                                                <span class=\"fileupload-new\">Select image</span>\n");
+      out.write("                                                <span class=\"fileupload-exists\">Change</span>\n");
+      out.write("                                                <input type=\"file\" id='Gumasta_file' name='Gumasta_file' accept=\"image/*\" onchange=\"validateImage(this.id);\" ></span>\n");
+      out.write("                                            <a href=\"#\" class=\"btn btn-small btn-link fileupload-exists\" data-dismiss=\"fileupload\">Remove</a>\n");
+      out.write("                                        </div>\n");
+      out.write("                                    </div>\n");
+      out.write("                                            <!--/////////////////////////////////////////-->\n");
+      out.write("                                     \n");
+      out.write("                                        <button type=\"submit\" name=\"Save_Attachments\"  value=\"Save_Attachments\"  id=\"Save_Attachments\" class=\"btn btn-beoro-3\"  >Save Attachments</button>\n");
+      out.write("                                        </div>\n");
+      out.write("                                    </div>\n");
+      out.write("                                   <!--///////////////////////////////////////////////////////////////////////////////////////////////////////-->\n");
+      out.write("                            \n");
+      out.write("                            </div></form>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                        </div>\n");
+      out.write("<script >\n");
+      out.write("function validateImage(id) {\n");
+      out.write("   var fileUpload = document.getElementById(id);\n");
+      out.write(" \n");
+      out.write("    //Check whether the file is valid Image.\n");
+      out.write("    var regex = new RegExp(\"([a-zA-Z0-9\\s_\\\\.\\-:])+(.jpg|.png|.gif)$\");\n");
+      out.write("    if (regex.test(fileUpload.value.toLowerCase())) {\n");
+      out.write(" \n");
+      out.write("        //Check whether HTML5 is supported.\n");
+      out.write("        if (typeof (fileUpload.files) != \"undefined\") {\n");
+      out.write("            //Initiate the FileReader object.\n");
+      out.write("            var reader = new FileReader();\n");
+      out.write("            //Read the contents of Image File.\n");
+      out.write("            reader.readAsDataURL(fileUpload.files[0]);\n");
+      out.write("            reader.onload = function (e) {\n");
+      out.write("                //Initiate the JavaScript Image object.\n");
+      out.write("                var image = new Image();\n");
+      out.write(" \n");
+      out.write("                //Set the Base64 string return from FileReader as source.\n");
+      out.write("                image.src = e.target.result;\n");
+      out.write("                       \n");
+      out.write("                //Validate the File Height and Width.\n");
+      out.write("                image.onload = function () {\n");
+      out.write("                    var height = this.height;\n");
+      out.write("                    var width = this.width;\n");
+      out.write("                    if (height != 1615 && width != 1200) {\n");
+      out.write("                        $(\"#\"+id).empty();\n");
+      out.write("                        alert(\"Height and Width must not exceed 100px.\");\n");
+      out.write("                        return false;\n");
+      out.write("                    }\n");
+      out.write("                    alert(\"Uploaded image has valid Height and Width.\");\n");
+      out.write("                    return true;\n");
+      out.write("                };\n");
+      out.write(" \n");
+      out.write("            }\n");
+      out.write("        } else {\n");
+      out.write("            alert(\"This browser does not support HTML5.\");\n");
+      out.write("            return false;\n");
+      out.write("        }\n");
+      out.write("    } else {\n");
+      out.write("        alert(\"Please select a valid Image file.\");\n");
+      out.write("        return false;\n");
+      out.write("    }\n");
+      out.write("}\n");
+      out.write("</script>\n");
+      out.write("\n");
+      out.write("<script>\n");
+      out.write("    window.history.forward();   \n");
+      out.write("</script>\n");
+      out.write("           </body>\n");
+      out.write("           \n");
+      out.write("   </html>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("\n");
+      out.write("     \n");
+      out.write("                <div class=\"row-fluid\"></div>\n");
+      out.write("            <div>\n");
+      out.write("            <div class=\"footer_space\"></div>\n");
+      out.write("        </div> \n");
+      out.write("\n");
+      out.write("    <!-- footer --> \n");
+      out.write("        <footer>\n");
+      out.write("            <div class=\"container\">\n");
+      out.write("                <div class=\"row\">\n");
+      out.write("                    <div class=\"span5\">\n");
+      out.write("                        <div>&copy; baazaronline.com 2017</div>\n");
+      out.write("                    </div>\n");
+      out.write("                    \n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("        </footer>\n");
+      out.write("    \n");
+      out.write("<script src=\"http://code.jquery.com/jquery-1.12.4.js\"></script>\n");
+      out.write("            <script src=\"https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js\"></script>\n");
+      out.write("            <script src=\"//code.jquery.com/jquery-migrate-1.2.1.min.js\"></script>\n");
+      out.write("    \n");
+      out.write("    \n");
+      out.write("    <!-- Forms -->  \n");
+      out.write("        <!-- jQuery UI -->\n");
+      out.write("            <script src=\"../js/lib/jquery-ui/jquery-ui-1.10.2.custom.min.js\" type=\"text/javascript\"></script>\n");
+      out.write("        <!-- masked inputs -->\n");
+      out.write("            <script src=\"../js/lib/jquery-inputmask/jquery.inputmask.min.js\"></script>\n");
+      out.write("            <script src=\"../js/lib/jquery-inputmask/jquery.inputmask.extensions.js\"></script>\n");
+      out.write("            <script src=\"../js/lib/jquery-inputmask/jquery.inputmask.date.extensions.js\"></script>\n");
+      out.write("        <!-- enchanced select box, tag handler -->\n");
+      out.write("            <script src=\"../js/lib/select2/select2.min.js\"></script>\n");
+      out.write("        <!-- password strength metter -->\n");
+      out.write("            <script src=\"../js/lib/pwdMeter/jquery.pwdMeter.min.js\"></script>\n");
+      out.write("        <!-- datepicker -->\n");
+      out.write("            <script src=\"../js/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js\"></script>\n");
+      out.write("            \n");
+      out.write("        \n");
+      out.write("        <!-- plupload and the jQuery queue widget -->\n");
+      out.write("            <script type=\"text/javascript\" src=\"../js/lib/plupload/js/plupload.full.js\"></script>\n");
+      out.write("            <script type=\"text/javascript\" src=\"../js/lib/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js\"></script>\n");
+      out.write("       \n");
+      out.write("\n");
+      out.write("            <script src=\"../js/pages/beoro_form_elements.js\"></script>\n");
+      out.write("\n");
+      out.write("             <!-- smart wizard -->\n");
+      out.write("            <script src=\"../js/lib/smart-wizard/js/jquery.smartWizard.min.js\"></script>\n");
+      out.write("        <!-- validation -->\n");
+      out.write("            <script src=\"../js/lib/jquery-validation/jquery.validate.min.js\"></script>\n");
+      out.write("            <script src=\"../js/pages/beoro_wizard.js\"></script>\n");
+      out.write("    \n");
+      out.write("            \n");
+      out.write("    \n");
+      out.write("    </body>\n");
+      out.write("\n");
+      out.write("</html>\n");
+      out.write("\n");
+      out.write("   ");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}

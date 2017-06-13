@@ -1,0 +1,14 @@
+SMAP
+Upload_005fproduct_005fimage_jsp.java
+JSP
+*S JSP
+*F
++ 0 Upload_product_image.jsp
+seller/Upload_product_image.jsp
++ 1 Footer.jsp
+seller/Footer.jsp
+*L
+1,183:51
+5#1,62:233
+183#0,2:294
+*E
